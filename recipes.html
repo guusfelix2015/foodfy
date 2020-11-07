@@ -3,10 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="styles.css" />
     <title>Foodfy</title>
@@ -21,7 +19,7 @@
     </header>
 
     <section class="cards">
-      <div class="card">
+      <div class="card" id="burger">
         <div class="card_img">
           <img src="/assets/burger.png" alt="" />
         </div>
@@ -33,7 +31,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" id="pizza">
         <div class="card_img">
           <img src="/assets/pizza.png" alt="" />
         </div>
@@ -45,7 +43,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" id="espaguete">
         <div class="card_img">
           <img src="/assets/espaguete.png" alt="" />
         </div>
@@ -57,7 +55,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" id="lasanha">
         <div class="card_img">
           <img src="/assets/lasanha.png" alt="" />
         </div>
@@ -69,7 +67,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" id="doce">
         <div class="card_img">
           <img src="/assets/doce.png" alt="" />
         </div>
@@ -81,7 +79,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" id="asinhas">
         <div class="card_img">
           <img src="/assets/asinhas.png" alt="" />
         </div>
@@ -92,7 +90,7 @@
           <p>por Vania Steroski</p>
         </div>
       </div>
-      <div class="card">
+      <div class="card" id="burger">
         <div class="card_img">
           <img src="/assets/burger.png" alt="" />
         </div>
@@ -104,7 +102,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" id="pizza">
         <div class="card_img">
           <img src="/assets/pizza.png" alt="" />
         </div>
@@ -116,9 +114,9 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" id="pizza">
         <div class="card_img">
-          <img src="/assets/espaguete.png" alt="" />
+          <img src="/assets/pizza.png" alt="" />
         </div>
         <div class="card_text">
           <h3>Espaguete ao alho</h3>
@@ -128,7 +126,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" id="lasanha">
         <div class="card_img">
           <img src="/assets/lasanha.png" alt="" />
         </div>
@@ -140,7 +138,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" id="doce">
         <div class="card_img">
           <img src="/assets/doce.png" alt="" />
         </div>
@@ -152,7 +150,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" id="asinhas">
         <div class="card_img">
           <img src="/assets/asinhas.png" alt="" />
         </div>
@@ -165,8 +163,24 @@
       </div>
     </section>
 
+    <div class="modal-overlay">
+      <div class="modal">
+        <a class="close-modal">
+          <p>Close Modal</p>
+        </a>
+        <div class="modal-content">
+          <div id="img-content">
+            <img id="img__content" src="" alt="">
+            <h2>Asinhas de Frango ao barbecue</h2>
+            <p>por Vania Steroski</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <p>Todos direitos reservados, receitas Foodfy.</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
