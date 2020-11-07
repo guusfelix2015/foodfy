@@ -27,7 +27,7 @@ header {
 
 .wrapper-content {
   width: 940px;
-  height: 280px;
+  height: auto;
   margin: 0 auto;
 }
 
