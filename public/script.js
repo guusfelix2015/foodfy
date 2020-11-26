@@ -5,7 +5,7 @@ for (let card of cards) {
   const imgID = card.getAttribute("id");
   card.addEventListener("click", () => {
     modalOverlay.classList.add("active");
-    modalOverlay.querySelector("#img__content").src = `/assets/${imgID}.png`;
+    modalOverlay.querySelector("#img__content").src = `../assets/${imgID}.png`;
   });
 }
 
