@@ -1,25 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"/>
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
-    <link rel="stylesheet" href="about.css"/>
-    <title>Foodfy</title>
-  </head>
-  <body>
-    <header>
-      <a href="/"><img src="../assets/logo.png" alt=""/></a>
-      <div class="menu">
-        <a href="/about">About</a>
-        <a href="/recipes">Recipes</a>
-      </div>
-    </header>
-    <div class="wrapper-content">
-      <div class="about">
-        <h2 id="space-title">Sobre o Foodfy</h2>
-        <p id="space-paragraph">
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="wrapper-content">
+  <div class="about">
+    <h2 id="space-title">Sobre o Foodfy</h2>
+    <p id="space-paragraph">
           Suspendisse placerat neque neque. Morbi dictum nulla non sapien rhoncus, et mattis erat commodo. Aliquam vel
           lacus a justo mollis luctus. Proin vel auctor eros, sed eleifend nunc. Curabitur eget tincidunt risus. Mauris
           malesuada facilisis magna, vitae volutpat sapien tristique eu. Morbi metus nunc, interdum in erat placerat,
@@ -32,10 +17,10 @@
           accumsan. Donec libero neque, vulputate semper orci et, malesuada sodales eros. Nunc ut nulla faucibus enim
           ultricies euismod.
         </p>
-      </div>
-      <div class="howStart">
-        <h2 id="make">Como tudo começou…</h2>
-        <p id="make__start">
+  </div>
+  <div class="howStart">
+    <h2 id="make">Como tudo começou…</h2>
+    <p id="make__start">
           Suspendisse placerat neque neque. Morbi dictum nulla non sapien rhoncus, et mattis erat commodo. Aliquam vel
           lacus a justo mollis luctus. Proin vel auctor eros, sed eleifend nunc. Curabitur eget tincidunt risus. Mauris
           malesuada facilisis magna, vitae volutpat sapien tristique eu. Morbi metus nunc, interdum in erat placerat,
@@ -48,20 +33,16 @@
           accumsan. Donec libero neque, vulputate semper orci et, malesuada sodales eros. Nunc ut nulla faucibus enim
           ultricies euismod.
         </p>
-      </div>
-      <div class="my__recipes">
-        <h2 id="make">Como tudo começou…</h2>
-        <p id="make__start">
+  </div>
+  <div class="my__recipes">
+    <h2 id="make">Como tudo começou…</h2>
+    <p id="make__start">
           Fusce nec pulvinar nunc. Duis porttitor tincidunt accumsan. Quisque pulvinar mollis ipsum ut accumsan. Proin
           ligula lectus, rutrum vel nisl quis, efficitur porttitor nisl. Morbi ut accumsan felis, eu ultrices lacus.
           Integer in tincidunt arcu, et posuere ligula. Morbi cursus facilisis feugiat. Praesent euismod nec nisl at
           accumsan. Donec libero neque, vulputate semper orci et, malesuada sodales eros. Nunc ut nulla faucibus enim
           ultricies euismod.
         </p>
-      </div>
-    </div>
-    <footer>
-      <p>Todos direitos reservados, receitas Foodfy.</p>
-    </footer>
-  </body>
-</html>
+  </div>
+</div>
+{% endblock %}
