@@ -15,7 +15,7 @@ nunjucks.configure("views", {
 });
 
 server.get("/", (req, res) => {
-  return res.render("index", { items: recipes });
+  return res.render("home", { items: recipes });
 });
 
 server.get("/about", (req, res) => {
@@ -25,6 +25,17 @@ server.get("/about", (req, res) => {
 server.get("/recipes", (req, res) => {
   return res.render("recipes", { items: recipes });
 });
+
+server.get("/recipe", (req, res) => {
+  return res.render("recipe");
+});
+
+server.get("/recipes/:index", function (req, res) {
+  const recipes = []; // Array de receitas carregadas do data.js
+  const recipeIndex = req.params.index;
+
+  console.log(recipes[recipeIndex]);
+})
 
 server.listen(5000, () => {
   console.log("server is running");

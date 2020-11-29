@@ -2,10 +2,15 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   background-color: white;
+}
+
+main {
+  min-height: 80vh;
 }
 
 header {
@@ -101,6 +106,12 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
+.footer.absolute {
+  position: absolute;
+  bottom: 0;
+}
+
 footer p {
   font-size: 14px;
   color: #999999;
@@ -160,7 +171,7 @@ footer p {
   text-align: center;
 }
 
-#img-content p {
+#img-content h4 {
   font-size: 18px;
   color: #777777;
   text-align: center;
