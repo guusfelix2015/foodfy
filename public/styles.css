@@ -107,11 +107,6 @@ footer {
   justify-content: center;
 }
 
-.footer.absolute {
-  position: absolute;
-  bottom: 0;
-}
-
 footer p {
   font-size: 14px;
   color: #999999;
