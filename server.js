@@ -26,16 +26,15 @@ server.get("/recipes", (req, res) => {
   return res.render("recipes", { items: recipes });
 });
 
-server.get("/recipe", (req, res) => {
-  return res.render("recipe");
-});
-
 server.get("/recipes/:index", function (req, res) {
-  const recipes = []; // Array de receitas carregadas do data.js
   const recipeIndex = req.params.index;
-
-  console.log(recipes[recipeIndex]);
-})
+  const recipe = recipes[recipeIndex];
+  console.log(recipe);
+  if (!recipe) {
+    return res.send("Recipe not found!");
+  }
+  return res.render("recipe", { item: recipe });
+});
 
 server.listen(5000, () => {
   console.log("server is running");
