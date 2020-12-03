@@ -5,8 +5,51 @@
 {% endblock %}
 
 {% block content %}
-  <img src="{{item.image}}" alt=""/>
-  <h1>{{item.title}}</h1>
-  <h1>{{item.author}}</h1>
-  <script src="/script.js"></script>
-{% endblock %}
+
+  <div class="menu">
+    <div class="recipe-header">
+      <img src="{{item.image}}" alt="Imagem do {{item.title}}">
+      <h1>{{item.title}}</h1>
+      <h2>por{{item.author}}</h2>
+    </div>
+
+    <div class="recipe-content">
+
+      <div id="ingredients" class="topic">
+        <h3>Ingredientes</h3>
+        <h4>ESCONDER</h4>
+        <div class="topic-content">
+          <ul>
+
+            {%for ingredient in item.ingredients%}
+              <li>{{ingredient}}</li>
+              {%endfor%}
+
+            </ul>
+          </div>
+        </div>
+
+        <div id="prepartion" class="topic">
+          <h3>Modo de Preparo</h3>
+          <h4>MOSTRAR</h4>
+          <div class="topic-content">
+            <ul>
+              {%for preparation in item.preparation%}
+                <li>{{preparation}}</li>
+                {%endfor%}
+              </ul>
+            </div>
+          </div>
+
+          <div id="information" class="topic">
+            <h3>informações adicionais</h3>
+            <h4>MOSTRAR</h4>
+            <div class="topic-content">
+              <p>{{item.information}}</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="/script.js"></script>
+    {% endblock content %}
