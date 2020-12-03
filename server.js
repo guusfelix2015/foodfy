@@ -26,7 +26,7 @@ server.get("/recipes", (req, res) => {
   return res.render("recipes", { items: recipes });
 });
 
-server.get("/recipes/:index", function (req, res) {
+server.get("/recipe/:index", function (req, res) {
   const recipeIndex = req.params.index;
   const recipe = recipes.find((recipe) => String(recipe.id) === recipeIndex);
   if (!recipe) {
