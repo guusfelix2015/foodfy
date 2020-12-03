@@ -3,7 +3,7 @@ const showHides = document.getElementsByClassName("topic");
 for (let card of cards) {
   card.addEventListener("click", function () {
     const recipeId = card.getAttribute("Id");
-    window.location.href = `/recipes/${recipeId}`;
+    window.location.href = `/recipe/${recipeId}`;
   });
 }
 
