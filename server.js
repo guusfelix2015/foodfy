@@ -28,7 +28,11 @@ server.get("/recipes", (req, res) => {
 
 server.get("/recipes/:index", function (req, res) {
   const recipeIndex = req.params.index;
+<<<<<<< HEAD
   const recipe = recipes.find((recipe) => String(recipe.id) === recipeIndex);
+=======
+  const recipe = recipes.find(recipe => String(recipe.id) === recipeIndex);
+>>>>>>> refs/remotes/origin/master
   if (!recipe) {
     return res.send("Recipe not found!");
   }
