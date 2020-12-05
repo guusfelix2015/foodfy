@@ -39,7 +39,10 @@ body {
   font-weight: 600;
   font-size: 24px;
   color: #111111;
-  margin-bottom: 20px;
+}
+
+.topic-content {
+  margin-top: 20px;
 }
 
 .topic-content ul {
@@ -54,21 +57,19 @@ body {
   text-align: justify;
 }
 
-#ingredients {
-  position: relative;
+.ingredients-header {
+  display: flex;
+  align-items: center;
 }
 
 #ingredients button {
-  position: absolute;
-  top: 11px;
-  left: 150px;
-  font-size: 12px;
   color: #999999;
   border: none;
   background: none;
   cursor: pointer;
   font-weight: 600;
   outline: none;
+  margin-left: 10px;
 }
 
 #prepartion {
@@ -79,7 +80,6 @@ body {
   font-size: 24px;
   color: #111111;
   font-weight: 600;
-  margin-bottom: 20px;
 }
 
 #prepartion button {
@@ -118,7 +118,7 @@ body {
   font-weight: 600;
 }
 
-#information p {
+.topic-content p {
   font-size: 18px;
   color: #444444;
   line-height: 28px;

@@ -16,8 +16,11 @@
       <div class="recipe-content">
 
         <div id="ingredients" class="topic">
-          <h3>Ingredientes</h3>
-          <button>ESCONDER</button>
+          <div class="ingredients-header">
+            <h3>Ingredientes</h3>
+            <button>ESCONDER</button>
+          </div>
+
           <div class="topic-content">
             <ul>
 
@@ -29,9 +32,12 @@
             </div>
           </div>
 
-          <div id="prepartion" class="topic">
-            <h3>Modo de Preparo</h3>
-            <button>ESCONDER</button>
+          <div id="ingredients" class="topic">
+            <div class="ingredients-header">
+              <h3>Modo de Preparo</h3>
+              <button>ESCONDER</button>
+            </div>
+
             <div class="topic-content">
               <ul>
                 {%for preparation in item.preparation%}
@@ -41,9 +47,11 @@
               </div>
             </div>
 
-            <div id="information" class="topic">
-              <h3>Informações adicionais</h3>
-              <button>ESCONDER</button>
+            <div id="ingredients" class="topic">
+              <div class="ingredients-header">
+                <h3>Informações adicionais</h3>
+                <button>ESCONDER</button>
+              </div>
               <div class="topic-content">
                 <p>{{item.information}}</p>
 
