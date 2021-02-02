@@ -1,1 +1,19 @@
 {% extends "layoutAdmin.njk" %}
+{% block content %}
+
+  <section class="header-content">
+    <div class="content">
+      <div>Receita: {{recipe.title}}</div>
+      <a href="/instructors/{{instructor.id}}/edit" class="button">Editar Receita</a>
+    </div>
+    <div><img src="{{recipe.recipe_img}}" alt=""></div>
+  </section>
+
+  <section class="title">
+    <div class="title-recipe">
+      <div>{{recipe.title}}</div>
+      <div>{{recipe.author}}</div>
+    </div>
+  </section>
+
+{% endblock %}

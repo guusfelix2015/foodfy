@@ -7,6 +7,20 @@
 
 <div class="item">
   <div class="text-title">
+    <p>Nome da receita</p>
+    <input type="text" name="title">
+  </div>
+</div>
+
+<div class="item">
+  <div class="text-title">
+    <p>Autor da receita</p>
+    <input type="text" name="author">
+  </div>
+</div>
+
+<div class="item">
+  <div class="text-title">
     <p>Ingredientes</p>
   </div>
   <div id="ingredients">
@@ -41,8 +55,8 @@
         <input type="text" name="preparation[]" value="">
       </div>
     {% endif %}
-    <button type="button" class="add-preparation">Adicionar novo passo</button>
   </div>
+  <button type="button" class="add-preparation">Adicionar novo passo</button>
 </div>
 
 <div class="item">
@@ -53,3 +67,4 @@
     <textarea name="information" cols="30" rows="10"></textarea>
   </div>
 </div>
+<script src="/js/addDinamicForm.js"></script>
