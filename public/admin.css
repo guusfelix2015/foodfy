@@ -78,6 +78,7 @@ input {
   border-radius: 4px;
   outline: none;
   font-size: 22px;
+  margin-top: 5px;
 }
 
 .item button {
@@ -119,4 +120,60 @@ input {
   background: #ffffff;
   border: 1px solid #dddddd;
   font-size: 20px;
+}
+
+/* SHOW  */
+.header-content {
+  width: 940px;
+  margin: 0 auto;
+  margin-top: 55px;
+}
+
+.header-content .content {
+  display: flex;
+  margin-bottom: 24px;
+  justify-content: space-between;
+}
+
+.header-content .content div {
+  font-size: 24px;
+  color: #111111;
+  font-weight: 600;
+  width: 305px;
+}
+
+.header-content .content a {
+  background: #6558c3;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  width: 130px;
+  text-align: center;
+  padding: 8px;
+  height: 35px;
+}
+
+.header-content img {
+  border-radius: 15px;
+}
+
+.title {
+  width: 940px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title .title-recipe div:nth-child(1) {
+  font-size: 36px;
+  color: #111111;
+  font-weight: bold;
+  margin-bottom: 3px;
+  margin-top: 50px;
+}
+
+.title .title-recipe div:nth-child(2) {
+  font-size: 20px;
+  color: #777777;
 }
