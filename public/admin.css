@@ -177,3 +177,28 @@ input {
   font-size: 20px;
   color: #777777;
 }
+
+.content {
+  width: 940px;
+  margin: 0 auto;
+  margin-top: 55px;
+}
+
+.box-content .title-ingredients p {
+  font-size: 24px;
+  color: #111111;
+  font-weight: 600;
+  margin-bottom: 19px;
+}
+
+.box-content .content-recipe ul {
+  list-style-type: none;
+}
+
+.box-content .content-recipe ul li {
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+  margin-bottom: 5px;
+  text-indent: initial;
+}
