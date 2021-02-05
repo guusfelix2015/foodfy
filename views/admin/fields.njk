@@ -1,21 +1,21 @@
 <div class="item">
   <div class="text-title">
     <p>Imagem da receita</p>
-    <input type="text" name="recipe_img">
+    <input type="text" name="recipe_img" value="{{recipe.recipe_img}}">
   </div>
 </div>
 
 <div class="item">
   <div class="text-title">
     <p>Nome da receita</p>
-    <input type="text" name="title">
+    <input type="text" name="title" value="{{recipe.title}}">
   </div>
 </div>
 
 <div class="item">
   <div class="text-title">
     <p>Autor da receita</p>
-    <input type="text" name="author">
+    <input type="text" name="author" value="{{recipe.author}}">
   </div>
 </div>
 
@@ -27,7 +27,7 @@
     {% if recipe.ingredients %}
       {% for ingredient in recipe.ingredients %}
         <div class="ingredient">
-          <input type="text" name="ingredients[]" value=""/>
+          <input type="text" name="ingredients[]" value="{{ingredient}}"/>
         </div>
       {% endfor %}
     {% else %}
@@ -44,15 +44,15 @@
     <p>Modo de preparo</p>
   </div>
   <div id="preparations">
-    {% if recipe.preparation %}
+    {% if recipe.ingredients %}
       {% for preparation in recipe.preparation %}
         <div class="preparation">
-          <input type="text" name="preparations[]" value=""/>
+          <input type="text" name="preparations[]" value="{{preparation}}"/>
         </div>
       {% endfor %}
     {% else %}
       <div class="preparation">
-        <input type="text" name="preparation[]" value="">
+        <input type="text" name="preparations[]" value="">
       </div>
     {% endif %}
   </div>
@@ -64,7 +64,7 @@
     <div class="text-title">
       <p>Informações adicionais </p>
     </div>
-    <textarea name="information" cols="30" rows="10"></textarea>
+    <textarea name="information" cols="30" rows="10">{{recipe.information}}</textarea>
   </div>
 </div>
 <script src="/js/addDinamicForm.js"></script>

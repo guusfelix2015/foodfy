@@ -4,7 +4,7 @@
   <section class="header-content">
     <div class="content">
       <div>Receita: {{recipe.title}}</div>
-      <a href="/instructors/{{instructor.id}}/edit" class="button">Editar Receita</a>
+      <a href="/admin/recipes/{{ recipe.id }}/edit" class="button">Editar Receita</a>
     </div>
     <div><img src="{{recipe.recipe_img}}" alt=""></div>
   </section>
@@ -29,10 +29,34 @@
             </li>
           {% endfor %}
         </ul>
-
       </div>
     </div>
+  </section>
 
+  <section class="preparation">
+    <div class="box-content">
+      <div class="title-prepair">
+        <p>Modo de preparo</p>
+      </div>
+      <div class="content-recipe">
+        <ul>
+          {% for preparation in recipe.preparation %}
+            <li>
+              <span>-</span>{{ preparation }}.
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="informarion">
+    <div class="title-information">
+      <p>Informações adicionais</p>
+    </div>
+    <div class="text-information">
+      {{recipe.information}}
+    </div>
   </section>
 
 {% endblock %}
