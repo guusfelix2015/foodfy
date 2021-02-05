@@ -202,3 +202,83 @@ input {
   margin-bottom: 5px;
   text-indent: initial;
 }
+
+.box-content {
+  width: 940px;
+  margin: 0 auto;
+  margin-top: 55px;
+}
+
+.preparation .title-prepair p {
+  font-size: 24px;
+  color: #111111;
+  font-weight: 600;
+  margin-bottom: 19px;
+}
+
+.preparation .content-recipe ul li {
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+  margin-bottom: 7px;
+  text-indent: initial;
+}
+
+.informarion {
+  width: 940px;
+  margin: 0 auto;
+  margin-top: 55px;
+}
+
+.informarion .title-information p {
+  font-size: 24px;
+  color: #111111;
+  font-weight: 600;
+  margin-bottom: 19px;
+}
+
+.informarion .text-information {
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+  height: 200px;
+}
+
+.details {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 55px;
+}
+
+.details .content-details {
+  display: flex;
+  gap: 500px;
+}
+
+.details .content-details h3 {
+  font-size: 24px;
+  color: #111111;
+  font-weight: 600;
+}
+
+.details .buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.details .buttons button:nth-child(1) {
+  background: #dc4747;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #ffffff;
+  width: 92px;
+  height: 37px;
+}
+
+.details .buttons button:nth-child(2) {
+  background: #6558c3;
+  border-radius: 4px;
+  color: #ffffff;
+  width: 140px;
+}
