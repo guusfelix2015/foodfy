@@ -251,9 +251,11 @@ input {
   margin-top: 55px;
 }
 
+
+
 .details .content-details {
   display: flex;
-  gap: 500px;
+  gap: 775px;
 }
 
 .details .content-details h3 {
@@ -262,7 +264,7 @@ input {
   font-weight: 600;
 }
 
-.details .buttons {
+.details .content-details .buttons {
   display: flex;
   gap: 10px;
 }

@@ -43,16 +43,16 @@
   <div class="text-title">
     <p>Modo de preparo</p>
   </div>
-  <div id="preparations">
-    {% if recipe.ingredients %}
+  <div id="preparation">
+    {% if recipe.preparation  %}
       {% for preparation in recipe.preparation %}
         <div class="preparation">
-          <input type="text" name="preparations[]" value="{{preparation}}"/>
+          <input type="text" name="preparation[]" value="{{preparation}}"/>
         </div>
       {% endfor %}
     {% else %}
       <div class="preparation">
-        <input type="text" name="preparations[]" value="">
+        <input type="text" name="preparation[]" value="">
       </div>
     {% endif %}
   </div>

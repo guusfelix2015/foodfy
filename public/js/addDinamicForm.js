@@ -16,7 +16,7 @@ function addIngredient() {
 document.querySelector(".add-ingredient").addEventListener("click", addIngredient);
 
 function addNewPass() {
-  const preparations = document.querySelector("#preparations");
+  const preparation = document.querySelector("#preparation");
   const fieldContainerPrepar = document.querySelectorAll(".preparation");
 
   // Realiza um clone do último ingrediente adicionado
@@ -27,7 +27,7 @@ function addNewPass() {
 
   // Deixa o valor do input vazio
   newFieldPrepair.children[0].value = "";
-  preparations.appendChild(newFieldPrepair);
+  preparation.appendChild(newFieldPrepair);
 }
 
 document.querySelector(".add-preparation").addEventListener("click", addNewPass);
