@@ -33,10 +33,10 @@ exports.post = (req, res) => {
   }
 
   let id = 1;
-  const lastRecipe = data.recipes[data.recipes.length + 1];
+  const lastRecipe = data.recipes[data.recipes.length - 1];
 
   if (lastRecipe) {
-    id = lastRecipe + 1;
+    id = lastRecipe.id + 1;
   }
 
   data.recipes.push({
@@ -76,7 +76,7 @@ exports.put = (req, res) => {
     if (id == recipe.id) {
       index = foundIndex;
       return true;
-    } 
+    }
   });
 
   if (!foundRecipe) return res.send("Receita não encontrada");
@@ -92,5 +92,19 @@ exports.put = (req, res) => {
   fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
     if (err) return res.send("Error");
     return res.redirect(`recipes/${id}`);
+  });
+};
+
+exports.delete = (req, res) => {
+  const { id } = req.body;
+  const filteredRecipes = data.recipes.filter((recipe) => {
+    return recipe.id != id;
+  });
+
+  data.recipes = filteredRecipes;
+
+  fs.writeFile("data.json", JSON.stringify(data.null, 2), (err) => {
+    if (err) return res.send("Error");
+    return res.redirect("/admin/recipes");
   });
 };
