@@ -251,8 +251,6 @@ input {
   margin-top: 55px;
 }
 
-
-
 .details .content-details {
   display: flex;
   gap: 775px;
@@ -269,18 +267,23 @@ input {
   gap: 10px;
 }
 
-.details .buttons button:nth-child(1) {
-  background: #dc4747;
+.details .buttons button {
+  background: #6558c3;
   border-radius: 4px;
   font-size: 16px;
   color: #ffffff;
-  width: 92px;
+  width: 140px;
   height: 37px;
 }
 
-.details .buttons button:nth-child(2) {
-  background: #6558c3;
+.button-delete {
+  position: relative;
+}
+
+.details .button-delete button {
+  background: #dc4747;
   border-radius: 4px;
-  color: #ffffff;
-  width: 140px;
+  width: 97px;
+  position: absolute;
+  right: 1px;
 }
