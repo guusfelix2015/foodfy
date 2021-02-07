@@ -103,7 +103,7 @@ exports.delete = (req, res) => {
 
   data.recipes = filteredRecipes;
 
-  fs.writeFile("data.json", JSON.stringify(data.null, 2), (err) => {
+  fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
     if (err) return res.send("Error");
     return res.redirect("/admin/recipes");
   });
