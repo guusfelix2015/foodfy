@@ -1,4 +1,22 @@
 {% extends "layoutAdmin.njk" %}
 {% block content %}
-<h2>teste 2</h2>
-{% endblock %}
+
+  <div class="topi">
+    <h3>Gerenciar Receitas</h3>
+  </div>
+
+  <section class="card_list">
+    {% for recipe in recipes %}
+      <div class="card_list_title">
+        <div class="card_list_img">
+          <img src="{{recipe.recipe_img}}" alt="">
+        </div>
+        <div class="card__list_title">
+          <h3>{{recipe.title}}</h3>
+          <p>{{recipe.author}}</p>
+          <a href="/admin/recipes/{{ recipe.id }}">Visualizar</a>
+        </div>
+      </div>
+      {%endfor%}
+    </section>
+  {% endblock %}
