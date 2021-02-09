@@ -287,3 +287,69 @@ input {
   position: absolute;
   right: 1px;
 }
+
+.topic {
+  width: 100%;
+}
+
+.topic .title {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.topic .title h3 {
+  text-align: left;
+  font-size: 24px;
+  color: #111111;
+  margin-top: 50px;
+}
+
+.topi {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.topi h3 {
+  font-size: 24px;
+  color: #111111;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.card_list {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.6fr 1.1fr;
+  gap: 20px;
+}
+
+.card_list_title {
+  display: flex;
+  gap: 20px;
+}
+
+.card_list_img img {
+  width: 170px;
+  height: 80px;
+  border-radius: 8.57px;
+}
+
+.card_list_title .card__list_title h3 {
+  font-size: 18px;
+  color: #111111;
+  margin-bottom: 5px;
+}
+
+.card_list_title .card__list_title p {
+  font-size: 14px;
+  color: #777777;
+  margin-bottom: 10px;
+}
+
+.card_list_title .card__list_title a {
+  font-size: 14px;
+  color: #6558c3;
+  font-weight: 600;
+  text-decoration: none;
+}
