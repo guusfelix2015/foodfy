@@ -16,6 +16,21 @@ header {
 .admin {
   width: 1200px;
   margin: 0 auto;
+  display: flex;
+}
+
+.admin .links-admin {
+  margin-left: 50px;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.admin .links-admin a {
+  font-size: 15px;
+}
+
+.admin .links-admin a:last-child {
+  margin-left: 30px;
 }
 
 .admin a {
@@ -352,4 +367,88 @@ input {
   color: #6558c3;
   font-weight: 600;
   text-decoration: none;
+}
+
+.box-chefs {
+  width: 940px;
+  margin-left: 355px;
+  margin-top: 55px;
+}
+
+.box-chefs .title-chef {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-chefs .title-chef a {
+  font-size: 24px;
+  color: #111111;
+}
+
+.box-chefs .title-chef button {
+  background: #6558c3;
+  border-radius: 4px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  outline: none;
+  cursor: pointer;
+  width: 121px;
+  height: 37px;
+  border: none;
+}
+
+.box-chefs .form-chef {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.box-chefs .form-chef h4 {
+  font-size: 16px;
+  color: #111111;
+}
+
+.title-editchef {
+  width: 940px;
+  margin-left: 355px;
+  margin-top: 55px;
+}
+
+.title-editchef .content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.title-editchef .content h2 {
+  font-size: 24px;
+  color: #111111;
+}
+
+.title-editchef .content .button button:first-child {
+  background: #dc4747;
+  border-radius: 4px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #ffffff;
+  width: 92px;
+  height: 37px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.title-editchef .content .button button:last-child {
+  background: #6558C3;
+  border-radius: 4px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #ffffff;
+  width: 121px;
+  height: 37px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
