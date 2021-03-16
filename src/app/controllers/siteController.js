@@ -15,7 +15,6 @@ exports.recipes = (req, res) => {
 exports.recipe = (req, res) => {
   const { id } = req.params;
   const foundRecipe = data.recipes.find((recipe) => {
-    return id == recipe.id;
   });
   if (!foundRecipe) return res.send("Recipe not found!");
   const recipe = {

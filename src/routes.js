@@ -1,9 +1,8 @@
 const express = require("express");
 const routes = express.Router();
-
-const recipes = require("./controllers/recipesControllers");
-const site = require("./controllers/siteController");
-const chefs = require("./controllers/recipesChefsController");
+const recipes = require("./app/controllers/recipesControllers");
+const site = require("./app/controllers/siteController");
+const chefs = require("./app/controllers/recipesChefsController");
 
 // SITE
 routes.get("/", site.home);
