@@ -1,12 +1,9 @@
 const Recipes = require("../models/Recipes");
+const { date } = require("../../lib/utils");
 
 module.exports = {
   index(req, res) {
     return res.render("admin/index");
-  },
-
-  show(req, res) {
-    return;
   },
 
   create(req, res) {
@@ -22,6 +19,16 @@ module.exports = {
 
     Recipes.create(req.body, (recipe) => {
       return res.redirect(`/recipes/${recipe.id}`);
+    });
+  },
+
+  show(req, res) {
+    Recipes.find(req.params.id, (recipe) => {
+      if (!recipe) return res.send("Recipe not found");
+
+      recipe.created_at = date(recipe.created_at).format;
+
+      return res.render("admin/show", { recipe });
     });
   },
 
