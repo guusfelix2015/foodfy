@@ -1,9 +1,9 @@
-const { date } = require("../../lib/utils");
 const db = require("../../config/db");
+const { date } = require("../../lib/utils");
 
 module.exports = {
   all(callback) {
-    db.query(`SELECT * recipes`, (err, results) => {
+    db.query(`SELECT * FROM recipes`, (err, results) => {
       if (err) return res.send("Database Error");
 
       callback(results.rows);
@@ -16,10 +16,11 @@ module.exports = {
       chef_id,
       image,
       title,
-      ingredients[],
-      preparation[],
+      ingredients,
+      preparation,
+      information,
       created_at
-    ) VALUES ($1, $2, $3, $4, $5, $6)
+    ) VALUES ($1, $2, $3, $4, $5, $6, $7)
     RETURNING id
     `;
 
@@ -27,13 +28,22 @@ module.exports = {
       data.chef_id,
       data.image,
       data.title,
-      data.ingredients,
-      data.preparation,
+      [data.ingredients],
+      [data.preparation],
+      data.information,
       date(Date.now()).iso,
     ];
 
     db.query(query, values, (err, results) => {
       if (err) throw `Database Error${err}`;
+      callback(results.rows[0]);
+    });
+  },
+
+  // catch onde id
+  find(id, callback) {
+    db.query(`SELECT * FROM recipes WHERE id = $1`, [id], (err, results) => {
+      if (err) return res.send("Database Error");
       callback(results.rows[0]);
     });
   },
