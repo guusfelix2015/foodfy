@@ -1,5 +1,5 @@
-const db = require("../../config/db");
 const { date } = require("../../lib/utils");
+const db = require("../../config/db");
 
 module.exports = {
   all(callback) {
