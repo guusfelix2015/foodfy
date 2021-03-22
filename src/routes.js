@@ -19,7 +19,6 @@ routes.get("/admin/recipes/:id/edit", recipes.edit);
 //ADMIN CHEFS
 routes.get("/admin/createChefs", chefs.createChefs);
 routes.get("/admin/editChef", chefs.editChef);
-
 routes.post("/admin/recipes", recipes.post); // Cadastrar nova receita
 routes.put("/admin/recipes", recipes.put); // Editar uma receita
 routes.delete("/admin/recipes", recipes.delete);
