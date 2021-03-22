@@ -27,28 +27,9 @@ module.exports = {
       if (!recipe) return res.send("Recipe not found");
 
       recipe.created_at = date(recipe.created_at).format;
-
+      recipe.ingredients = recipe.ingredients[0];
+      recipe.preparation = recipe.preparation[0];
       return res.render("admin/show", { recipe });
     });
-  },
-
-  edit(req, res) {
-    return;
-  },
-
-  put(req, res) {
-    const keys = Object.keys(req.body);
-
-    for (key of keys) {
-      if (req.body[key] == "") return res.send("Preencha todos os campos");
-    }
-
-    let { chef_id, image, title, ingredients, preparation } = req.body;
-
-    return;
-  },
-
-  delete(req, res) {
-    return;
   },
 };
