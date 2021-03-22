@@ -18,7 +18,7 @@ module.exports = {
     }
 
     Recipes.create(req.body, (recipe) => {
-      return res.redirect(`/recipes/${recipe.id}`);
+      return res.redirect(`recipes/${recipe.id}`);
     });
   },
 
