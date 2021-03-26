@@ -28,8 +28,8 @@ module.exports = {
       data.chef_id,
       data.image,
       data.title,
-      [data.ingredients],
-      [data.preparation],
+      data.ingredients,
+      data.preparation,
       data.information,
       date(Date.now()).iso,
     ];
