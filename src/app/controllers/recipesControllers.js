@@ -25,11 +25,29 @@ module.exports = {
   show(req, res) {
     Recipes.find(req.params.id, (recipe) => {
       if (!recipe) return res.send("Recipe not found");
-
       recipe.created_at = date(recipe.created_at).format;
       recipe.ingredients = recipe.ingredients[0];
       recipe.preparation = recipe.preparation[0];
       return res.render("admin/show", { recipe });
+    });
+  },
+
+  edit(req, res) {
+    Recipes.find(req.params.id, (recipe) => {
+      if (!recipe) return res.send("Recipe not found");
+
+      return res.render("admin/edit", { recipe });
+    });
+  },
+
+  put(req, res) {
+    const keys = Object.keys(req.body);
+
+    for (key of keys) {
+      if (req.body[key] == "") return res.send("Preencha todos os campos");
+    }
+    Recipes.update(req.body, () => {
+      return res.redirect(`admin/${req.body.id}`);
     });
   },
 };
