@@ -53,8 +53,8 @@ module.exports = {
     title=($2),
     ingredients=($3),
     preparation=($4),
-    information=($5),
-    WHERE id = id
+    information=($5)
+    WHERE id = ($6)
     `;
 
     const values = [
