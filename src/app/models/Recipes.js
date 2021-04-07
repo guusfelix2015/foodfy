@@ -26,8 +26,8 @@ module.exports = {
     const values = [
       data.image,
       data.title,
-      [data.ingredients],
-      [data.preparation],
+      data.ingredients,
+      data.preparation,
       data.information,
       date(Date.now()).iso,
     ];
@@ -41,7 +41,7 @@ module.exports = {
   // catch onde id
   find(id, callback) {
     db.query(`SELECT * FROM recipes WHERE id = $1`, [id], (err, results) => {
-      if (err) return res.send("Database Error");
+      if (err) throw `Database Error${err}`;
       callback(results.rows[0]);
     });
   },
@@ -60,8 +60,8 @@ module.exports = {
     const values = [
       data.image,
       data.title,
-      [data.ingredients],
-      [data.preparation],
+      data.ingredients,
+      data.preparation,
       data.information,
       data.id,
     ];

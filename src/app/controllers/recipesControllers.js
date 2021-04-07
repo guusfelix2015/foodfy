@@ -26,8 +26,7 @@ module.exports = {
     Recipes.find(req.params.id, (recipe) => {
       if (!recipe) return res.send("Recipe not found");
       recipe.created_at = date(recipe.created_at).format;
-      recipe.ingredients = recipe.ingredients[0];
-      recipe.preparation = recipe.preparation[0];
+      console.log(recipe);
       return res.render("admin/show", { recipe });
     });
   },
