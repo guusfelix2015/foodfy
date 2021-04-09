@@ -46,7 +46,13 @@ module.exports = {
       if (req.body[key] == "") return res.send("Preencha todos os campos");
     }
     Recipes.update(req.body, () => {
-      return res.redirect(`/admin/recipes`);
+      return res.redirect("/admin/recipes");
+    });
+  },
+
+  delete(req, res) {
+    Recipes.delete(req.body.id, () => {
+      return res.redirect("/admin/recipes");
     });
   },
 };
