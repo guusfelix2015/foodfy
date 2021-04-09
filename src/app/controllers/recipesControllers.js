@@ -46,7 +46,7 @@ module.exports = {
       if (req.body[key] == "") return res.send("Preencha todos os campos");
     }
     Recipes.update(req.body, () => {
-      return res.redirect(`admin/${req.body.id}`);
+      return res.redirect(`/admin/recipes`);
     });
   },
 };
