@@ -16,6 +16,7 @@ routes.get("/admin/recipes/create", recipes.create); // Mostrar formulário de n
 routes.get("/admin/recipes/:id", recipes.show); // Exibir detalhes de uma receita
 routes.get("/admin/recipes/:id/edit", recipes.edit);
 routes.put("/admin/recipes", recipes.put);
+routes.delete("/admin/recipes", recipes.delete);
 
 //ADMIN CHEFS
 routes.get("/admin/createChefs", chefs.createChefs);
